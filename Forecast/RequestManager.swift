@@ -128,7 +128,7 @@ class RequestManager {
     
     func getWeatherAtCities(cityIds : NSArray, completion: ((Array<City>) -> Void)?) {
         
-        NSLog("get")
+       // NSLog("get")
         var string_url : String = "http://api.openweathermap.org/data/2.5/group?id="
 //        string_url = string_url.stringByAppendingString(name)
         for cityID in cityIds {

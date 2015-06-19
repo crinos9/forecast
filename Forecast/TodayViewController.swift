@@ -122,7 +122,7 @@ class TodayViewController: UIViewController, UIAlertViewDelegate {
         login.logInWithReadPermissions(["public_profile"], handler: { (result, error) -> Void in
             var r : FBSDKLoginManagerLoginResult = result
             if (!r.isCancelled)  {
-                NSLog("%@", r.token.userID)
+               // NSLog("%@", r.token.userID)
                 RequestManager.sharedInstance // to initialize
             } else {
                 

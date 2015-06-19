@@ -54,9 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-        if let loc = locManager.location { 
-            NSLog("%f %f", loc.coordinate.latitude, loc.coordinate.longitude) 
-        }
+
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
@@ -72,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        NSLog("%f %f", manager.location.coordinate.latitude, manager.location.coordinate.longitude)
+       // NSLog("%f %f", manager.location.coordinate.latitude, manager.location.coordinate.longitude)
         if let location = locManager.location {
             RequestManager.sharedInstance.getWeatherAtPlaceByLoc(location)
         }

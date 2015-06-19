@@ -16,7 +16,7 @@ class SearchResultsViewController : UIViewController, UITableViewDelegate, UITab
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
                 
-        NSLog("%@", searchController.searchBar.text)
+       // NSLog("%@", searchController.searchBar.text)
         if (count(searchController.searchBar.text) > 3) {
             self.activityIndic.startAnimating()
 
