@@ -26,13 +26,7 @@ class TodayViewController: UIViewController, UIAlertViewDelegate {
       
         self.tabBarController?.navigationController?.navigationBarHidden = false;
 
-        if let token = FBSDKAccessToken.currentAccessToken() {
-               RequestManager.sharedInstance // to initialize
-        } else {
-            askForFBPermision()
-        }
-        
-
+                
         NSNotificationCenter.defaultCenter().addObserverForName("possibleCitiesUpdated", object: nil, queue: nil) { (notf) -> Void in 
             self.reloadData()   //its caled on location changed
         }
@@ -41,7 +35,14 @@ class TodayViewController: UIViewController, UIAlertViewDelegate {
     override func viewWillAppear(animated: Bool) {
         self.tabBarController?.tabBar.hidden = false;
         
-        reloadData()
+        if let token = FBSDKAccessToken.currentAccessToken() {
+            RequestManager.sharedInstance // to initialize if token is known
+            reloadData()
+        } else {
+            askForFBPermision()
+        }
+
+        
     }
     
     func reloadData () {

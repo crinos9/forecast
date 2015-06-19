@@ -27,6 +27,7 @@ class RequestManager {
     var chosenCity : Int = -1
     
     init() {
+        
         firebase.authWithOAuthProvider("facebook", token: FBSDKAccessToken.currentAccessToken().tokenString,
             withCompletionBlock: { error, authData in
                 self.firebaseCities = self.firebase.childByAppendingPath("users").childByAppendingPath(self.firebase.authData.uid).childByAppendingPath("cities") 
