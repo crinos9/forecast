@@ -27,56 +27,55 @@ class RequestManager {
     var chosenCity : Int = -1
     
     init() {
-        
-        firebase.authWithOAuthProvider("facebook", token: FBSDKAccessToken.currentAccessToken().tokenString,
-            withCompletionBlock: { error, authData in
-                self.firebaseCities = self.firebase.childByAppendingPath("users").childByAppendingPath(self.firebase.authData.uid).childByAppendingPath("cities") 
+        if let token = FBSDKAccessToken.currentAccessToken() {
+            firebase.authWithOAuthProvider("facebook", token: token.tokenString,
+                withCompletionBlock: { error, authData in
+                    self.firebaseCities = self.firebase.childByAppendingPath("users").childByAppendingPath(self.firebase.authData.uid).childByAppendingPath("cities") 
                 
-                self.firebaseCities!.observeEventType(.Value, withBlock: { snapshot in
-                    self.lastCities = snapshot.value as? NSArray
+                    self.firebaseCities!.observeEventType(.Value, withBlock: { snapshot in
+                        self.lastCities = snapshot.value as? NSArray
                     
                     
-                    if self.lastCities != nil  {
-                        self.getWeatherAtCities(self.lastCities!, completion: { (weather) -> Void in
-                            self.citiesWeather = weather
-                            NSNotificationCenter.defaultCenter().postNotificationName("weatherCitiesChanged", object: self)
-                        })
-                    }
-                })
-                
-                
-                self.firebaseLength = self.firebase.childByAppendingPath("users").childByAppendingPath(self.firebase.authData.uid).childByAppendingPath("length_unit")
-                self.firebaseLength!.observeEventType(.Value, withBlock: { snapshot in 
-                    if let  unit = snapshot.value as? String {
-                        if (unit == "Meters") {
-                            self.lengthUnit = "metric"
-                        } else if (unit == "Miles") {
-                            self.lengthUnit = "imperial"
+                        if self.lastCities != nil  {
+                            self.getWeatherAtCities(self.lastCities!, completion: { (weather) -> Void in
+                                self.citiesWeather = weather
+                                NSNotificationCenter.defaultCenter().postNotificationName("weatherCitiesChanged", object: self)
+                            })
                         }
-                    }
-                    NSNotificationCenter.defaultCenter().postNotificationName("weatherCitiesChanged", object: self)
-                    NSNotificationCenter.defaultCenter().postNotificationName("possibleCitiesUpdated", object: self)
-                })
+                    })
                 
-                self.firebaseTemp = self.firebase.childByAppendingPath("users").childByAppendingPath(self.firebase.authData.uid).childByAppendingPath("temp_unit")
-                self.firebaseTemp!.observeEventType(.Value, withBlock: { snapshot in 
-                    
-                    
-                    if let  unit = snapshot.value as? String {
-                        if (unit == "Celsius") {
-                            self.tempUnit = "metric"
-                        } else if (unit == "Fahrenheit") {
-                            self.tempUnit = "imperial"
+                
+                    self.firebaseLength = self.firebase.childByAppendingPath("users").childByAppendingPath(self.firebase.authData.uid).childByAppendingPath("length_unit")
+                    self.firebaseLength!.observeEventType(.Value, withBlock: { snapshot in 
+                        if let  unit = snapshot.value as? String {
+                            if (unit == "Meters") {
+                                self.lengthUnit = "metric"
+                            } else if (unit == "Miles") {
+                                self.lengthUnit = "imperial"
+                            }
                         }
                         NSNotificationCenter.defaultCenter().postNotificationName("weatherCitiesChanged", object: self)
                         NSNotificationCenter.defaultCenter().postNotificationName("possibleCitiesUpdated", object: self)
-                    }
+                    })
+                
+                    self.firebaseTemp = self.firebase.childByAppendingPath("users").childByAppendingPath(self.firebase.authData.uid).childByAppendingPath("temp_unit")
+                    self.firebaseTemp!.observeEventType(.Value, withBlock: { snapshot in 
                     
-                })
+                    
+                        if let  unit = snapshot.value as? String {
+                            if (unit == "Celsius") {
+                                self.tempUnit = "metric"
+                            } else if (unit == "Fahrenheit") {
+                                self.tempUnit = "imperial"
+                            }
+                            NSNotificationCenter.defaultCenter().postNotificationName("weatherCitiesChanged", object: self)
+                            NSNotificationCenter.defaultCenter().postNotificationName("possibleCitiesUpdated", object: self)
+                    }   
+                    
+                    })
                 
-                
-        })
-        
+            })
+        }
         
         
         

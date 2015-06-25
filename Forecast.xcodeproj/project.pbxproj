@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		944C92A71B31EB6900C90460 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 944C92A31B31EB6900C90460 /* ProximaNova-Bold.otf */; };
-		944C92A81B31EB6900C90460 /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 944C92A41B31EB6900C90460 /* ProximaNova-Light.otf */; };
-		944C92A91B31EB6900C90460 /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 944C92A51B31EB6900C90460 /* ProximaNova-Regular.otf */; };
-		944C92AA1B31EB6900C90460 /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 944C92A61B31EB6900C90460 /* ProximaNova-Semibold.otf */; };
+		94273DE21B382BA6008C2A2E /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 94273DDE1B382BA6008C2A2E /* ProximaNova-Bold.otf */; };
+		94273DE31B382BA6008C2A2E /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 94273DDF1B382BA6008C2A2E /* ProximaNova-Light.otf */; };
+		94273DE41B382BA6008C2A2E /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 94273DE01B382BA6008C2A2E /* ProximaNova-Regular.otf */; };
+		94273DE51B382BA6008C2A2E /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 94273DE11B382BA6008C2A2E /* ProximaNova-Semibold.otf */; };
 		944C92AC1B32940B00C90460 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944C92AB1B32940B00C90460 /* ForecastViewController.swift */; };
 		9454E8261B2C22F50098163A /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9454E8251B2C22F50098163A /* LocationCell.swift */; };
 		9454E8281B2C2D390098163A /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9454E8271B2C2D390098163A /* SearchResultsViewController.swift */; };
@@ -53,15 +53,15 @@
 /* Begin PBXFileReference section */
 		4E5787BB25A72955D79A9FA4 /* Pods-Forecast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Forecast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Forecast/Pods-Forecast.debug.xcconfig"; sourceTree = "<group>"; };
 		7DD380DC96317B4A8FA3F231 /* libPods-Forecast.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Forecast.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94273DDE1B382BA6008C2A2E /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.otf"; sourceTree = "<group>"; };
+		94273DDF1B382BA6008C2A2E /* ProximaNova-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Light.otf"; sourceTree = "<group>"; };
+		94273DE01B382BA6008C2A2E /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Regular.otf"; sourceTree = "<group>"; };
+		94273DE11B382BA6008C2A2E /* ProximaNova-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Semibold.otf"; sourceTree = "<group>"; };
 		94323A271B2DA63000C818FF /* Forecast-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Forecast-Bridging-Header.h"; sourceTree = "<group>"; };
 		94323A2A1B2DB13C00C818FF /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		94323A2B1B2DB13C00C818FF /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		94323A2C1B2DB13C00C818FF /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKMessengerShareKit.framework; path = FacebookSDK/FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
 		94323A2D1B2DB13C00C818FF /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
-		944C92A31B31EB6900C90460 /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Bold.otf"; path = "../../../Downloads/iOS - STRV Test Project/Graphics/Assets/ProximaNova/ProximaNova-Bold.otf"; sourceTree = "<group>"; };
-		944C92A41B31EB6900C90460 /* ProximaNova-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Light.otf"; path = "../../../Downloads/iOS - STRV Test Project/Graphics/Assets/ProximaNova/ProximaNova-Light.otf"; sourceTree = "<group>"; };
-		944C92A51B31EB6900C90460 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Regular.otf"; path = "../../../Downloads/iOS - STRV Test Project/Graphics/Assets/ProximaNova/ProximaNova-Regular.otf"; sourceTree = "<group>"; };
-		944C92A61B31EB6900C90460 /* ProximaNova-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Semibold.otf"; path = "../../../Downloads/iOS - STRV Test Project/Graphics/Assets/ProximaNova/ProximaNova-Semibold.otf"; sourceTree = "<group>"; };
 		944C92AB1B32940B00C90460 /* ForecastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		9454E8251B2C22F50098163A /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		9454E8271B2C2D390098163A /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
@@ -121,13 +121,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		94273DDD1B382BA6008C2A2E /* ProximaNova */ = {
+			isa = PBXGroup;
+			children = (
+				94273DDE1B382BA6008C2A2E /* ProximaNova-Bold.otf */,
+				94273DDF1B382BA6008C2A2E /* ProximaNova-Light.otf */,
+				94273DE01B382BA6008C2A2E /* ProximaNova-Regular.otf */,
+				94273DE11B382BA6008C2A2E /* ProximaNova-Semibold.otf */,
+			);
+			path = ProximaNova;
+			sourceTree = "<group>";
+		};
 		944C92A21B31EB5300C90460 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				944C92A31B31EB6900C90460 /* ProximaNova-Bold.otf */,
-				944C92A41B31EB6900C90460 /* ProximaNova-Light.otf */,
-				944C92A51B31EB6900C90460 /* ProximaNova-Regular.otf */,
-				944C92A61B31EB6900C90460 /* ProximaNova-Semibold.otf */,
+				94273DDD1B382BA6008C2A2E /* ProximaNova */,
 			);
 			name = Font;
 			sourceTree = "<group>";
@@ -338,13 +346,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				945EB7981B2747D300681253 /* Main.storyboard in Resources */,
-				944C92A91B31EB6900C90460 /* ProximaNova-Regular.otf in Resources */,
+				94273DE41B382BA6008C2A2E /* ProximaNova-Regular.otf in Resources */,
 				946D1DAB1B2BFC5900A61C95 /* SettingsHeader.xib in Resources */,
 				945EB79D1B2747D300681253 /* LaunchScreen.xib in Resources */,
 				945EB79A1B2747D300681253 /* Images.xcassets in Resources */,
-				944C92A71B31EB6900C90460 /* ProximaNova-Bold.otf in Resources */,
-				944C92A81B31EB6900C90460 /* ProximaNova-Light.otf in Resources */,
-				944C92AA1B31EB6900C90460 /* ProximaNova-Semibold.otf in Resources */,
+				94273DE21B382BA6008C2A2E /* ProximaNova-Bold.otf in Resources */,
+				94273DE31B382BA6008C2A2E /* ProximaNova-Light.otf in Resources */,
+				94273DE51B382BA6008C2A2E /* ProximaNova-Semibold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
